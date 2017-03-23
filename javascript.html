@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  	<link rel="shortcut icon" href="_assets/images/favicon.png">
+    <meta charset="utf-8">
+    <title>Web Portfolio: Cathy Zhu</title>
+    <link type="text/css" rel="stylesheet" href="_assets/css/mystyle.css" media="screen">
+
+ <style>
+    div#clock { 
+      display: none;
+    }
+  </style>
+
+    <script>
+ function toggleClock() { 
+    // get the clock 
+    var myClock = document.getElementById('clock');
+
+    // get the current value of the clock's display property 
+    var displaySetting = myClock.style.display;
+
+    // also get the clock button, so we can change what it says 
+    var clockButton = document.getElementById('clockButton');
+        
+    // now toggle the clock and the button text, depending on current state
+    if (displaySetting == 'block') { 
+      // clock is visible. hide it
+      myClock.style.display = 'none';
+      // change button text
+      clockButton.innerHTML = 'show clock';
+    }
+    else { 
+      // clock is hidden. show it 
+      myClock.style.display = 'block';
+      // change button text
+      clockButton.innerHTML = 'hide clock';
+    }
+  }  
+
+        function showAlert() { 
+        var myText = "welcome to my web portfolio!";
+        alert (myText);
+      }
+       
+      function updateTime() { 
+    // get all parts of the current time
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+
+  // add leading zero's to minutes and seconds
+  if (minutes < 10) { 
+    minutes = '0' + minutes;
+  }
+  if (seconds < 10) { 
+    seconds = '0' + seconds;
+  }       
+
+  // get time of day (am or pm) 
+  if (hours >= 12 && hours < 24) { 
+    var timeOfDay = 'pm';
+  }
+  else { 
+    var timeOfDay = 'am'; 
+  }
+        
+  // convert hours from 24-hour time to 12-hour time
+  if (hours > 12) { 
+    hours = hours - 12;
+  }
+    // splice them together into a character string named "currentTime"
+    /* var currentTime = hours + ':' + minutes + ':' + seconds; */
+    var currentTime = hours + ':' + minutes + ':' + seconds + '  ' + timeOfDay; 
+    hours = 24;
+    minutes = 7;
+    seconds = 3;
+
+    // get the clock div 
+    var myClock = document.getElementById('clock');
+    
+    // write the currentTime string to the clock div
+    myClock.innerHTML = currentTime;
+}
+var x = document.getElementById("myNumber");
+var x = document.createElement("INPUT");
+x.setAttribute("type", "number");
+
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("name must be filled out");
+        return true;
+    }
+}
+
+    </script>
+  </head>
+
+
+ <body>
+  <button onclick="showAlert()">click here!</button>
+  <button onclick="toggleClock()" id="clockButton">show clock
+      </button>
+
+  <div id="clock">
+      <body onload="setInterval('updateTime()',1000)">
+      
+    </div>
+
+  	<a href="_assets/images/bannerf.png">
+    <img src="_assets/images/bannerf.png" width="1200" height="400" style="border:none" 
+         alt="banner"/></a>
+  	<h1>Web Portfolio: Javascript</h1>
+  <nav>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="accessibility.html">Accessibility</a></li>
+		<li><a href="usability.html">Usability</a></li>
+		<li><a href="graphics.html">Graphics</a></li>
+		<li><a href="javascript.html">JavaScript</a></li>
+		<li><a href="tools.html">Tools</a></li>
+		<li><a href="videos.html">Videos</a></li>
+  
+	</ul>
+	</nav>
+
+<br>
+<br>
+<br>
+<br>
+
+  <div class="name">
+name: <input type="text" name="fname">
+</div>
+
+
+      <div class="rad">
+            <label for="r-choice">was this page functioning?</label>
+            <br>
+            <input type="radio" value="yes" name="r_method" id="r-choice"> <label for="r-choice">yes! - it works</label>
+            <br>
+            <input type="radio" value="no" name="r_method" id="r-choice"> <label for="r-choice-no">no! - needs work</label>
+            <br>
+            <input type="radio" value="ups" name="r_method" id="r-choice"> <label for="r-choice-eh">eh, can't tell</label>
+        </div>
+
+    <div class="rating">
+            <label for="r-rate">rate my site:</label>
+                 <select id="s-state">
+                    <option value="s">- select -</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+        </div>
+
+<div class="comments">
+  comments & suggestions
+  <br>
+  <textarea id="words" rows="10" cols="60">additional comments</textarea>
+<input type="button" onclick="getwords()" value="submit"/>
+</div>
+
+	<br>
+
+	<div class="photos">
+		<h2 id="photoalbum">{ web photo album }</h2>
+
+  <a href="_assets/images/scan.png">
+    <img src="_assets/images/scan_tmb.png"width="72" height="72" style="border:none" 
+         alt="scan" />
+  </a>
+
+  <a href="_assets/images/tree.jpg">
+    <img src="_assets/images/tree_tmb.jpg" width="72" height="72" style="border:none" 
+         alt="tree" />
+  </a>
+
+  <a href="_assets/images/road.jpg">
+    <img src="_assets/images/road_tmb.jpg" width="72" height="72" style="border:none" 
+         alt="road" />
+  </a>
+  
+  		<h2>{ contact }</h2>
+
+  <div class="button">
+
+  	<a href="_assets/images/camera copy.png">
+    <img src="_assets/images/camera copy.png" width="72" height="72" style="border:none" 
+         alt="camera"/>
+
+  </a>
+  
+      <a href="_assets/images/mail copy.png">
+        <a href="mailto:cathy.48559@nv.ccsd.net">
+    <img src="_assets/images/mail copy.png" width="72" height="72" style="border:none"
+         alt="mail"  />
+  </a>
+  </a>
+</div>
+
+  </body>
+</html>
