@@ -1,0 +1,279 @@
+/*Cathy Zhu, Period 4, Web Design & Dev. I*/
+
+/*
+	Color Scheme for this website:
+
+	#A37F93 - purple (not in use)
+	#B1DBB3 - green (not in use)
+	#FFC6BF - pink (not in use)
+
+	DIV gray blue - #8A9EA3
+	light teal - #BFD6D1
+	HOVER light purple - #B2B6FF
+	NAV blue - #2E8AD7
+	H1 & H2 DARK violet blue - #3A4970 
+*/
+
+body {
+	font-size: 1em;
+	font-weight: normal;
+	font-family: "Century Gothic", Gotham, Verdana, sans-serif;
+	text-align: left;
+	background-color: #BFD6D1;
+	background-image: url('../images/sf.png');
+	color: #FFFFFF;
+ 	margin-left: 10em;
+ 	margin-right: 10em;
+ 	width: 70em;
+ 	min-width: 720px;
+ 	margin: 0 auto; 
+}
+
+h1, h2, h3 {
+ 	font-family: Warnick,Rockwell,"Times New Roman",serif;
+ 	font-weight: bold;
+}
+
+h1 {
+	font-size: 3em;
+	font-family: Warnick,Rockwell,"Times New Roman",serif;
+	font-weight: bold;
+	color: #3A4970;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1.4em;
+	font-weight: bold;
+	font-family: Warnick,Rockwell,"Times New Roman",serif;
+	color: #3A4970;
+	text-align: left;
+	margin-left: 1em;
+	padding: 0em;
+}
+
+h3 {
+	font-size: 2em;
+	font-weight: bold;
+	font-family: Warnick,Rockwell,"Times New Roman",serif;
+	color: #BFD6D1;
+	text-align: center;
+	padding: 3em;
+	padding-bottom: 0em;
+}
+
+div {
+	font-size: 1em;
+	font-weight: normal;
+	font-family: "Century Gothic", Gotham, Verdana, sans-serif;
+	color: #000000;/*black*/
+	text-align: left;
+    /*background-color: #8A9EA3;*/
+    /*border: 2px dashed black;*/
+    margin: 0;
+}
+
+ p {    
+    padding: 1.5em;
+    border-width: 10px; 
+    border-style: solid;
+    border-color: #8A9EA3;
+    margin: 10px;
+}
+ 
+/*NAVIGATION*/
+
+ nav { 
+    clear: left;
+}   
+
+a:hover, a:focus {
+	color: black;
+	background-color: #B2B6FF; 
+}
+
+nav ul { 
+	list-style-type: none;
+}
+
+nav ul li { 
+	float: left;
+	margin-right: 1em;
+	padding-top: 2em;
+}
+
+nav ul li a { 
+	padding: .75em 2em;
+	text-decoration: none; 
+	background-color: #2E8AD7; 
+	color: black; 
+	border: 2px solid black;
+	border-top-left-radius: 1em 1em; 
+	border-top-right-radius: 1em 1em; 
+}	
+
+nav ul li a:hover, nav ul li a:focus { 
+	color: black; 
+	background-color: #B2B6FF; 
+	font-weight: bold;
+}
+
+main {
+	clear: left;
+	padding: 1em;
+}
+
+/* table styles */
+/* for accessibility.html */
+
+table {
+	margin: 0 auto; /* this is a trick for centering certain elements */
+	background-color: black;
+}
+
+th, td {
+	background-color: #BFD6D1;
+	color: black;
+	padding: 0.75em;
+	margin: 1px;
+}
+
+caption {
+	font-weight: bold;
+	font-size: 1.2em;
+	margin: 0.75em;
+}
+
+/*JAVASCRIPT BUTTON*/
+
+button { 
+    font-size: 1.1em;
+    background-color: #2E8AD7;
+    color: #000000;
+    border: 2px solid black;
+    border-top-left-radius: 1em 1em; 
+  	border-top-right-radius: 1em 1em; 
+  	padding: .40em;
+}
+button:hover, button:focus, button:active { 
+    /* swap colors */
+    color: #000000;
+    background-color: #B2B6FF;
+    cursor: pointer; /* displays a hand */
+    font-weight: bold;
+}
+
+/* elements with ids and classes */
+
+div#skipnav {
+	top: 5px;
+	left: 5px;
+	position: relative;
+	right: 12.5%; 
+	width: 10em;
+	text-align: center;
+	background-color: #8A9EA3;
+	border: 2px dashed black;
+	padding: 1em;
+}
+
+div.info {
+	width: 40%;
+	font-size: 1.2em;
+	float: left;
+	background-color: #8A9EA3;
+	border: 2px dashed black;
+	padding: 2em;
+}
+
+div#main, div#main p {
+	color: white;
+	font-style: normal
+}
+
+div#main p {
+	margin-left: 2em;
+}
+
+div#main p#overview {
+ /* cancel out the above style for the #overview */
+	margin-left: 1em;
+	font-size: 1.1em;
+}
+
+p#overview:first-letter {
+	font-family: Warnick,Rockwell,"Times New Roman",serif;
+	font-size: 2em;
+}
+
+div#main p.temp {
+	font-style: italic;
+}
+
+div.photos {
+	 padding: 1em;
+	 border: none;
+}
+
+div.button {
+	 padding: 1em;
+	 border: none;
+}
+
+div#clock {
+	width: 15%;
+	font-family: Warnick,Rockwell,"Times New Roman",serif;
+	font-size: 1.7em;
+	font-weight: bold;
+	color: #3A4970;
+ 	border: 2px dashed black;
+ 	background-color: #8A9EA3;
+ 	padding: .85em;
+ 	margin: 0 auto;
+ 	text-align: center;
+}
+
+div#myplayer {
+	padding: .7em;
+	font-size: 1em;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #8A9EA3;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 30px;
+
+}
+
+.rad {
+	color: white;
+	margin: 40px;
+	padding: 6px;
+}
+
+.name {
+	color: white;
+	margin: 40px;
+	padding: 6px;
+}
+
+.comments {
+	color: white;
+	margin: 40px;
+	padding: 6px;
+}
+.rating {
+	color: white;
+	margin: 40px;
+	padding: 6px;
+}
+
+
+
